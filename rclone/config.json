@@ -1,0 +1,39 @@
+{
+    "name": "Rclone",
+    "version": "2.0.1",
+    "slug": "rclone",
+    "description": "Rclone is a command line program to sync files and directories to and from various providers.",
+    "arch": ["amd64"],
+    "startup": "once",
+    "boot": "manual",
+    "url": "",
+    "map": [
+        "backup:rw",
+        "config:rw",
+        "share:rw"
+    ],
+    "options": {
+        "configuration_path": "/share/rclone/rclone.conf",
+        "rclones": [
+            {
+                "name": "",
+                "local-path": "/backup/",
+                "local-retention_days": 14,
+                "remote-path": "/",
+                "remote-retention_days": 14
+            }
+        ]
+    },
+    "schema": {
+        "configuration_path": "str",
+        "rclones": [
+            {
+                "name": "str",
+                "local-path": "str",
+                "local-retention_days": "int",
+                "remote-path": "str",
+                "remote-retention_days": "int"
+            }
+        ]
+    }
+}
