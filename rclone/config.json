@@ -6,7 +6,7 @@
     "arch": ["amd64"],
     "startup": "once",
     "boot": "manual",
-    "url": "",
+    "url": "https://github.com/sendit2me/hassio-addons/blob/main/rclone/README.md",
     "map": [
         "backup:rw",
         "config:rw",
