@@ -17,10 +17,10 @@
         "rclones": [
             {
                 "name": "",
-                "local-path": "/backup/",
-                "local-retention_days": 14,
-                "remote-path": "/",
-                "remote-retention_days": 14
+                "local_path": "/backup/",
+                "local_retention_days": 14,
+                "remote_path": "/",
+                "remote_retention_days": 14
             }
         ]
     },
@@ -29,10 +29,10 @@
         "rclones": [
             {
                 "name": "str",
-                "local-path": "str",
-                "local-retention_days": "int",
-                "remote-path": "str",
-                "remote-retention_days": "int"
+                "local_path": "str",
+                "local_retention_days": "int",
+                "remote_path": "str",
+                "remote_retention_days": "int"
             }
         ]
     }
