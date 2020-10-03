@@ -1,17 +1,17 @@
 #!/usr/bin/env bashio
 
 RCLONE_CONFIG=$(bashio::config 'configuration_path')
-REMOTES=$(bashio::config 'remotes')
+RCLONES=$(bashio::config 'rclones')
 
-for remote in ${REMOTES}; do
+for rclone in ${RCLONES}; do
 
-    remote_name=$(bashio::jq "${remote}" ".name")
+    remote_name=$(bashio::jq "${rclone}" ".name")
 
-    remote_local_path=$(bashio::jq "${remote}" ".local_path")
-    remote_local_retention=$(bashio::jq "${remote}" ".local_retention_days")
+    remote_local_path=$(bashio::jq "${rclone}" ".local_path")
+    remote_local_retention=$(bashio::jq "${rclone}" ".local_retention_days")
 
-    remote_remote_path=$(bashio::jq "${remote}" ".remote_path")
-    remote_remote_retention=$(bashio::jq "${remote}" ".remote_retention_days")
+    remote_remote_path=$(bashio::jq "${rclone}" ".remote_path")
+    remote_remote_retention=$(bashio::jq "${rclone}" ".remote_retention_days")
 
     bashio::log.info "Starting Remote copy for ${remote_name} ${remote_local_path} to ${remote_remote_path} ......"
 
